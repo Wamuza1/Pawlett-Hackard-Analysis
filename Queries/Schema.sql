@@ -37,3 +37,24 @@
   PRIMARY KEY (emp_no)
  );
  
+  Create table dept_emp(
+   emp_no int not null,
+   dept_no varchar(4) not null,
+   from_date date not null,
+   to_date date not null,
+ Foreign key (emp_no) References employees (emp_no),
+ Foreign key (dept_no) References departments (dept_no),
+ Primary key (emp_no, dept_no)
+ );
+
+Create table titles(
+    emp_no int not null,
+   title varchar not null,
+   from_date date not null,
+   to_date date not null,
+ Foreign key (emp_no) References employees (emp_no),
+ Primary key (emp_no , title, from_date)
+ );
+ 
+ select * from titles;
+ 
