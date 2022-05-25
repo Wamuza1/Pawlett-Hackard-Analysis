@@ -1,5 +1,5 @@
 -- Creating Department table for PH-Employee
- create table department(
+ create table departments(
  dept_no varchar(4) not null,
  dept_name varchar(40) not null,
  primary key (dept_no),
@@ -23,7 +23,7 @@
    from_date date not null,
    to_date date not null,
  Foreign key (emp_no) References employees (emp_no),
- Foreign key (dept_no) References department (dept_no),
+ Foreign key (dept_no) References departments (dept_no),
  Primary key (emp_no, dept_no)
  );
  
@@ -56,5 +56,14 @@ Create table titles(
  Primary key (emp_no , title, from_date)
  );
  
- select * from titles;
+ select * from retirement_info;
+drop Table retirement_info;
+ -- Create new table for retiring employees
+SELECT emp_no, first_name, last_name
+INTO retirement_info
+FROM employees
+WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
+-- Check the table
+SELECT * FROM retirement_info;
  
