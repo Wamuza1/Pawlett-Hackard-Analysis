@@ -56,8 +56,8 @@ Create table titles(
  Primary key (emp_no , title, from_date)
  );
  
- select * from retirement_info;
-drop Table retirement_info;
+
+--drop Table retirement_info;
  -- Create new table for retiring employees
 SELECT emp_no, first_name, last_name
 INTO retirement_info
