@@ -25,3 +25,7 @@ Deliverable 2: The Employees Eligible for the Mentorship Program
 
 
 Deliverable 3: A written report on the employee database analysis.
+
+Looking at the above analyses, we observed that thee are multiple potential openings that need to be filled due to retirement. There are various employees with different titles who are eligible to mentor new employees to fill these positions. It means 90,398 positions have to be filled out as soon as the employees begin retiring.
+
+Moreover, for better analysis, it is better to make a query that presents us with outputs of employees who are retiring for the current year. 
